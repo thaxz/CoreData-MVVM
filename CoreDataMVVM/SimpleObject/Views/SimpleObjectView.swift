@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SimpleObjectView.swift
 //  CoreDataMVVM
 //
 //  Created by thaxz on 12/09/23.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject var viewModel = CoreDataViewModel()
+struct SimpleObjectView: View {
+    @StateObject var viewModel = SimpleCoreDataViewModel()
     @State var text: String = ""
     var body: some View {
         NavigationStack {
@@ -49,8 +49,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SimpleObjectView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SimpleObjectView()
     }
 }
