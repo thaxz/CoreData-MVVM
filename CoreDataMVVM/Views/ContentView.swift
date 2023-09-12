@@ -37,6 +37,7 @@ struct ContentView: View {
                     ForEach(viewModel.savedEntities){ entity in
                         Text(entity.name ?? "NO NAME")
                     }
+                    .onDelete(perform: viewModel.deleteFruit)
                 } .listStyle(.plain)
             }
             .padding(.horizontal)

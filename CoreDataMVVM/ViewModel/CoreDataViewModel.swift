@@ -47,6 +47,20 @@ class CoreDataViewModel: ObservableObject {
         saveData()
     }
     
+    // MARK: Delete
+    func deleteFruit(indexSet: IndexSet){
+        // Since our fruits are displayed on a list, we're using the index set to figure out witch one is and deleting it
+        guard let index = indexSet.first else {return}
+        let entity = savedEntities[index]
+        container.viewContext.delete(entity)
+        saveData()
+    }
+    
+    // MARK: Update
+    func updateFruit(){
+        
+    }
+
     //MARK: SAVE
     func saveData(){
         do {
