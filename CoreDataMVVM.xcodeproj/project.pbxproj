@@ -56,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				E91D4E6E2AB09B6100D3FD13 /* CoreDataMVVMApp.swift */,
-				E91D4E702AB09B6100D3FD13 /* ContentView.swift */,
 				E91D4E7E2AB09CCE00D3FD13 /* Models */,
 				E91D4E7D2AB09CC800D3FD13 /* ViewModel */,
 				E91D4E7C2AB09CC300D3FD13 /* Views */,
@@ -78,6 +77,7 @@
 		E91D4E7C2AB09CC300D3FD13 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E91D4E702AB09B6100D3FD13 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
