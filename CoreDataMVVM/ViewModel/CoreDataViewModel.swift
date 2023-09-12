@@ -57,8 +57,13 @@ class CoreDataViewModel: ObservableObject {
     }
     
     // MARK: Update
-    func updateFruit(){
-        
+    func updateFruit(entity: FruitEntity){
+        // This is a mock example on how to update values inside a entity
+        // since our UI isnt complex. we're just adding an exclamation mark
+        let currentName = entity.name ?? ""
+        let newName = currentName + "!"
+        entity.name = newName
+        saveData()
     }
 
     //MARK: SAVE

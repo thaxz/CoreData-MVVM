@@ -36,6 +36,9 @@ struct ContentView: View {
                 List {
                     ForEach(viewModel.savedEntities){ entity in
                         Text(entity.name ?? "NO NAME")
+                            .onTapGesture {
+                                viewModel.updateFruit(entity: entity)
+                            }
                     }
                     .onDelete(perform: viewModel.deleteFruit)
                 } .listStyle(.plain)
