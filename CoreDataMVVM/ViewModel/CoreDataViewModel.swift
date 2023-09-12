@@ -27,6 +27,7 @@ class CoreDataViewModel: ObservableObject {
         fetchFruits()
     }
     
+    // MARK: Fetch
     func fetchFruits(){
         // creating request
         let request = NSFetchRequest<FruitEntity>(entityName: "FruitEntity")
@@ -39,4 +40,21 @@ class CoreDataViewModel: ObservableObject {
         }
     }
     
+    // MARK: Create
+    func addFruit(text: String){
+        let newFruit = FruitEntity(context: container.viewContext)
+        newFruit.name = text
+        saveData()
+    }
+    
+    //MARK: SAVE
+    func saveData(){
+        do {
+            try container.viewContext.save()
+            // Calling this function again to update our published var, since we're not inside a view and arent able to use @FetchRequest to have updated in realtime
+            fetchFruits()
+        } catch let error {
+          print("error saving \(error)")
+        }
+    }
 }
