@@ -28,6 +28,14 @@ class ComplexCoreDataViewModel: ObservableObject {
         save()
     }
     
+    func addDepartment(){
+        let newDepartment = DepartmentEntity(context: manager.context)
+        newDepartment.name = "Marketing"
+        // 1 to N, so its an empty array
+        newDepartment.businesses = [business[0]]
+        save()
+    }
+    
     // Fetch
     func getBusiness(){
         let request = NSFetchRequest<BusinessEntity>(entityName: "BusinessEntity")
@@ -36,11 +44,12 @@ class ComplexCoreDataViewModel: ObservableObject {
         } catch {
             print("error fetching business \(error.localizedDescription)")
         }
-       
+        
     }
     
     func save(){
         manager.save()
+        getBusiness()
     }
     
 }
