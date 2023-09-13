@@ -24,7 +24,13 @@ struct ComplexObjectView: View {
                             .frame(maxWidth: .infinity)
                             .background(Color.blue.cornerRadius(10))
                     }
-
+                    ScrollView(.horizontal, showsIndicators: true){
+                        HStack(alignment: .top){
+                            ForEach(viewModel.business){ business in
+                                BusinessView(entity: business)
+                            }
+                        }
+                    }
                 }
                 .padding()
             }
