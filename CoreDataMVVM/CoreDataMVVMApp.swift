@@ -11,7 +11,7 @@ import SwiftUI
 struct CoreDataMVVMApp: App {
     var body: some Scene {
         WindowGroup {
-            SimpleObjectView()
+            ComplexObjectView()
         }
     }
 }

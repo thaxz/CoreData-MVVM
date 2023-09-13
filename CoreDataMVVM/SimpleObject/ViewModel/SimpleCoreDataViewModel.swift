@@ -1,5 +1,5 @@
 //
-//  CoreDataViewModel.swift
+//  SimpleCoreDataViewModel.swift
 //  CoreDataMVVM
 //
 //  Created by thaxz on 12/09/23.
@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 
-class CoreDataViewModel: ObservableObject {
+class SimpleCoreDataViewModel: ObservableObject {
     
     let container: NSPersistentContainer
     // To store our entities

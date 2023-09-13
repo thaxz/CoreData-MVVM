@@ -10,7 +10,7 @@ import CoreData
 
 class ComplexCoreDataViewModel: ObservableObject {
     
-    
+    let manager = CoreDataManager.shared
     
     
     

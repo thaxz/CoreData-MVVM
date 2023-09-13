@@ -15,6 +15,8 @@
 		E91D4E832AB09E2D00D3FD13 /* FruitsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E91D4E812AB09E2D00D3FD13 /* FruitsContainer.xcdatamodeld */; };
 		E91D4E8B2AB0ABE900D3FD13 /* ComplexObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D4E8A2AB0ABE900D3FD13 /* ComplexObjectView.swift */; };
 		E91D4E8D2AB0AC2900D3FD13 /* ComplexCoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D4E8C2AB0AC2900D3FD13 /* ComplexCoreDataViewModel.swift */; };
+		E91D4E902AB0ACD900D3FD13 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D4E8F2AB0ACD900D3FD13 /* CoreDataManager.swift */; };
+		E974057D2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E974057B2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		E91D4E822AB09E2D00D3FD13 /* FruitsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruitsContainer.xcdatamodel; sourceTree = "<group>"; };
 		E91D4E8A2AB0ABE900D3FD13 /* ComplexObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexObjectView.swift; sourceTree = "<group>"; };
 		E91D4E8C2AB0AC2900D3FD13 /* ComplexCoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexCoreDataViewModel.swift; sourceTree = "<group>"; };
+		E91D4E8F2AB0ACD900D3FD13 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E974057C2AB24DBB006BE2AD /* ComplexContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComplexContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,7 @@
 			children = (
 				E91D4E6E2AB09B6100D3FD13 /* CoreDataMVVMApp.swift */,
 				E91D4E852AB0AB1200D3FD13 /* SimpleObject */,
-				E91D4E862AB0AB4300D3FD13 /* ObjectsWithRelationships */,
+				E91D4E862AB0AB4300D3FD13 /* ComplexObject */,
 				E91D4E722AB09B6300D3FD13 /* Assets.xcassets */,
 				E91D4E742AB09B6300D3FD13 /* Preview Content */,
 			);
@@ -110,14 +114,15 @@
 			path = SimpleObject;
 			sourceTree = "<group>";
 		};
-		E91D4E862AB0AB4300D3FD13 /* ObjectsWithRelationships */ = {
+		E91D4E862AB0AB4300D3FD13 /* ComplexObject */ = {
 			isa = PBXGroup;
 			children = (
+				E91D4E8E2AB0ACCB00D3FD13 /* Manager */,
 				E91D4E882AB0AB6D00D3FD13 /* Views */,
 				E91D4E872AB0AB6400D3FD13 /* ViewModel */,
 				E91D4E892AB0AB7200D3FD13 /* CoreData */,
 			);
-			path = ObjectsWithRelationships;
+			path = ComplexObject;
 			sourceTree = "<group>";
 		};
 		E91D4E872AB0AB6400D3FD13 /* ViewModel */ = {
@@ -139,8 +144,17 @@
 		E91D4E892AB0AB7200D3FD13 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				E974057B2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E91D4E8E2AB0ACCB00D3FD13 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E91D4E8F2AB0ACD900D3FD13 /* CoreDataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,11 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E974057D2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld in Sources */,
 				E91D4E832AB09E2D00D3FD13 /* FruitsContainer.xcdatamodeld in Sources */,
 				E91D4E712AB09B6100D3FD13 /* SimpleObjectView.swift in Sources */,
 				E91D4E802AB09CDF00D3FD13 /* SimpleCoreDataViewModel.swift in Sources */,
 				E91D4E8B2AB0ABE900D3FD13 /* ComplexObjectView.swift in Sources */,
 				E91D4E8D2AB0AC2900D3FD13 /* ComplexCoreDataViewModel.swift in Sources */,
+				E91D4E902AB0ACD900D3FD13 /* CoreDataManager.swift in Sources */,
 				E91D4E6F2AB09B6100D3FD13 /* CoreDataMVVMApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +444,16 @@
 			);
 			currentVersion = E91D4E822AB09E2D00D3FD13 /* FruitsContainer.xcdatamodel */;
 			path = FruitsContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		E974057B2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E974057C2AB24DBB006BE2AD /* ComplexContainer.xcdatamodel */,
+			);
+			currentVersion = E974057C2AB24DBB006BE2AD /* ComplexContainer.xcdatamodel */;
+			path = ComplexContainer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
