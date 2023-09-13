@@ -18,7 +18,7 @@ struct BusinessView: View {
                 Text("Departments: ")
                     .bold()
                 ForEach(departments){ department in
-                    Text(department.name ?? "Department without name")
+                    Text(department.name ?? "")
                 }
             }
             // If there's any employees, converting the set into an array
@@ -26,7 +26,7 @@ struct BusinessView: View {
                 Text("Employees: ")
                     .bold()
                 ForEach(employees){ employee in
-                    Text(employee.name ?? "Employee without name")
+                    Text(employee.name ?? "")
                 }
             }
         }

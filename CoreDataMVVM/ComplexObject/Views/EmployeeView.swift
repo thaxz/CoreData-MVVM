@@ -13,12 +13,14 @@ struct EmployeeView: View {
         VStack(alignment: .leading, spacing: 20){
             Text("Name: \(entity.name ?? "")")
                 .bold()
+            Text("Age: \(entity.age )")
+                .bold()
             Text("Business: ")
                 .bold()
-            Text(entity.business?.name ?? "Business without name")
+            Text(entity.business?.name ?? "")
             Text("Departments: ")
                 .bold()
-            Text(entity.department?.name ?? "Department without name")
+            Text(entity.department?.name ?? "")
         }
         .padding()
         .frame(maxWidth: 300, alignment: .leading)

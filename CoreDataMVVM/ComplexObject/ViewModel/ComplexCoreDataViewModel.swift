@@ -34,20 +34,21 @@ class ComplexCoreDataViewModel: ObservableObject {
     
     func addDepartment(){
         let newDepartment = DepartmentEntity(context: manager.context)
-        newDepartment.name = "Marketing"
+        newDepartment.name = "Engineering"
         // 1 to N, so its an set
-        newDepartment.businesses = [business[0]]
+        //newDepartment.businesses = [business[0]]
+        newDepartment.addToEmployees(employees[2])
         save()
     }
     
     func addEmployee(){
         let newEmployee = EmployeeEntity(context: manager.context)
-        newEmployee.name = "Taylor"
-        newEmployee.age = 33
+        newEmployee.name = "Swift"
+        newEmployee.age = 130
         newEmployee.dateJoined = Date()
         // 1 to 1, so its only one entity
-        newEmployee.business = business[0]
-        newEmployee.department = departments[0]
+//        newEmployee.business = business[0]
+//        newEmployee.department = departments[0]
         save()
     }
     
@@ -82,6 +83,7 @@ class ComplexCoreDataViewModel: ObservableObject {
     func save(){
         business.removeAll()
         departments.removeAll()
+        employees.removeAll()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.manager.save()
             self.getBusiness()

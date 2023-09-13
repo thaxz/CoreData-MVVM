@@ -16,7 +16,7 @@ struct ComplexObjectView: View {
             ScrollView {
                 VStack(spacing: 20){
                     Button {
-                        viewModel.addEmployee()
+                        viewModel.addDepartment()
                     } label: {
                         Text("Perform Action")
                             .foregroundColor(.white)
