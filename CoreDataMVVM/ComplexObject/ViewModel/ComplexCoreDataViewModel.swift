@@ -97,6 +97,14 @@ class ComplexCoreDataViewModel: ObservableObject {
         }
     }
     
+    // Delete
+    
+    func deleteDepartment(){
+        let department = departments[1]
+        manager.context.delete(department)
+        save()
+    }
+    
     func save(){
         business.removeAll()
         departments.removeAll()
