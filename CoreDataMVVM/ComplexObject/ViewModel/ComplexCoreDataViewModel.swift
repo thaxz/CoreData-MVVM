@@ -15,10 +15,12 @@ class ComplexCoreDataViewModel: ObservableObject {
     //MARK: Stored entities
     @Published var business: [BusinessEntity] = []
     @Published var departments: [DepartmentEntity] = []
+    @Published var employees: [EmployeeEntity] = []
     
     init(){
         getBusiness()
         getDepartments()
+        getEmployees()
     }
     
     // MARK: CRUD
@@ -33,8 +35,19 @@ class ComplexCoreDataViewModel: ObservableObject {
     func addDepartment(){
         let newDepartment = DepartmentEntity(context: manager.context)
         newDepartment.name = "Marketing"
-        // 1 to N, so its an empty array
+        // 1 to N, so its an set
         newDepartment.businesses = [business[0]]
+        save()
+    }
+    
+    func addEmployee(){
+        let newEmployee = EmployeeEntity(context: manager.context)
+        newEmployee.name = "Taylor"
+        newEmployee.age = 33
+        newEmployee.dateJoined = Date()
+        // 1 to 1, so its only one entity
+        newEmployee.business = business[0]
+        newEmployee.department = departments[0]
         save()
     }
     
@@ -57,6 +70,15 @@ class ComplexCoreDataViewModel: ObservableObject {
         }
     }
     
+    func getEmployees(){
+        let request = NSFetchRequest<EmployeeEntity>(entityName: "EmployeeEntity")
+        do {
+            employees = try manager.context.fetch(request)
+        } catch {
+            print("error fetching employees \(error.localizedDescription)")
+        }
+    }
+    
     func save(){
         business.removeAll()
         departments.removeAll()
@@ -64,6 +86,7 @@ class ComplexCoreDataViewModel: ObservableObject {
             self.manager.save()
             self.getBusiness()
             self.getDepartments()
+            self.getEmployees()
         }
         
     }

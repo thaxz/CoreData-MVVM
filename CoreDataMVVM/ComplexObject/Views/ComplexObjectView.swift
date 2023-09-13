@@ -16,7 +16,7 @@ struct ComplexObjectView: View {
             ScrollView {
                 VStack(spacing: 20){
                     Button {
-                        viewModel.addDepartment()
+                        viewModel.addEmployee()
                     } label: {
                         Text("Perform Action")
                             .foregroundColor(.white)
@@ -35,6 +35,13 @@ struct ComplexObjectView: View {
                         HStack(alignment: .top){
                             ForEach(viewModel.departments){ departments in
                                 DepartmentView(entity: departments)
+                            }
+                        }
+                    }
+                    ScrollView(.horizontal, showsIndicators: true){
+                        HStack(alignment: .top){
+                            ForEach(viewModel.employees){ employee in
+                                EmployeeView(entity: employee)
                             }
                         }
                     }

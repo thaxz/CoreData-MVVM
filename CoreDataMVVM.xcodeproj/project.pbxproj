@@ -19,6 +19,7 @@
 		E974057D2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E974057B2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld */; };
 		E974057F2AB25399006BE2AD /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974057E2AB25399006BE2AD /* BusinessView.swift */; };
 		E97405812AB25976006BE2AD /* DepartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97405802AB25976006BE2AD /* DepartmentView.swift */; };
+		E97405832AB25C77006BE2AD /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97405822AB25C77006BE2AD /* EmployeeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E974057C2AB24DBB006BE2AD /* ComplexContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComplexContainer.xcdatamodel; sourceTree = "<group>"; };
 		E974057E2AB25399006BE2AD /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
 		E97405802AB25976006BE2AD /* DepartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentView.swift; sourceTree = "<group>"; };
+		E97405822AB25C77006BE2AD /* EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E91D4E8A2AB0ABE900D3FD13 /* ComplexObjectView.swift */,
+				E97405822AB25C77006BE2AD /* EmployeeView.swift */,
 				E974057E2AB25399006BE2AD /* BusinessView.swift */,
 				E97405802AB25976006BE2AD /* DepartmentView.swift */,
 			);
@@ -236,6 +239,7 @@
 				E974057D2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld in Sources */,
 				E91D4E832AB09E2D00D3FD13 /* FruitsContainer.xcdatamodeld in Sources */,
 				E91D4E712AB09B6100D3FD13 /* SimpleObjectView.swift in Sources */,
+				E97405832AB25C77006BE2AD /* EmployeeView.swift in Sources */,
 				E974057F2AB25399006BE2AD /* BusinessView.swift in Sources */,
 				E91D4E802AB09CDF00D3FD13 /* SimpleCoreDataViewModel.swift in Sources */,
 				E91D4E8B2AB0ABE900D3FD13 /* ComplexObjectView.swift in Sources */,
