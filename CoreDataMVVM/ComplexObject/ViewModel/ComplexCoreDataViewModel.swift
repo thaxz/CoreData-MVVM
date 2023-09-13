@@ -12,6 +12,21 @@ class ComplexCoreDataViewModel: ObservableObject {
     
     let manager = CoreDataManager.shared
     
+    //MARK: Stored entities
+    @Published var business: [BusinessEntity] = []
     
+    
+    // MARK: CRUD
+    
+    // Create
+    func addBusiness(){
+        let newBusiness = BusinessEntity(context: manager.context)
+        newBusiness.name = "Apple"
+        save()
+    }
+    
+    func save(){
+        manager.save()
+    }
     
 }
