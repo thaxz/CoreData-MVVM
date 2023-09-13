@@ -57,6 +57,10 @@ class ComplexCoreDataViewModel: ObservableObject {
     // Fetch
     func getBusiness(){
         let request = NSFetchRequest<BusinessEntity>(entityName: "BusinessEntity")
+        let sort = NSSortDescriptor(keyPath: \BusinessEntity.name, ascending: true)
+        request.sortDescriptors = [sort]
+        let predicate = NSPredicate(format: "name == %@", "Apple")
+        request.predicate = predicate
         do {
             business = try manager.context.fetch(request)
         } catch {
@@ -75,6 +79,17 @@ class ComplexCoreDataViewModel: ObservableObject {
     
     func getEmployees(){
         let request = NSFetchRequest<EmployeeEntity>(entityName: "EmployeeEntity")
+        do {
+            employees = try manager.context.fetch(request)
+        } catch {
+            print("error fetching employees \(error.localizedDescription)")
+        }
+    }
+    
+    func getEmployees(for business: BusinessEntity){
+        let request = NSFetchRequest<EmployeeEntity>(entityName: "EmployeeEntity")
+        let filter = NSPredicate(format: "business == %@", business)
+        request.predicate = filter
         do {
             employees = try manager.context.fetch(request)
         } catch {
