@@ -18,6 +18,7 @@
 		E91D4E902AB0ACD900D3FD13 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D4E8F2AB0ACD900D3FD13 /* CoreDataManager.swift */; };
 		E974057D2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E974057B2AB24DBB006BE2AD /* ComplexContainer.xcdatamodeld */; };
 		E974057F2AB25399006BE2AD /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974057E2AB25399006BE2AD /* BusinessView.swift */; };
+		E97405812AB25976006BE2AD /* DepartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97405802AB25976006BE2AD /* DepartmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E91D4E8F2AB0ACD900D3FD13 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E974057C2AB24DBB006BE2AD /* ComplexContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComplexContainer.xcdatamodel; sourceTree = "<group>"; };
 		E974057E2AB25399006BE2AD /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
+		E97405802AB25976006BE2AD /* DepartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				E91D4E8A2AB0ABE900D3FD13 /* ComplexObjectView.swift */,
 				E974057E2AB25399006BE2AD /* BusinessView.swift */,
+				E97405802AB25976006BE2AD /* DepartmentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				E974057F2AB25399006BE2AD /* BusinessView.swift in Sources */,
 				E91D4E802AB09CDF00D3FD13 /* SimpleCoreDataViewModel.swift in Sources */,
 				E91D4E8B2AB0ABE900D3FD13 /* ComplexObjectView.swift in Sources */,
+				E97405812AB25976006BE2AD /* DepartmentView.swift in Sources */,
 				E91D4E8D2AB0AC2900D3FD13 /* ComplexCoreDataViewModel.swift in Sources */,
 				E91D4E902AB0ACD900D3FD13 /* CoreDataManager.swift in Sources */,
 				E91D4E6F2AB09B6100D3FD13 /* CoreDataMVVMApp.swift in Sources */,

@@ -14,9 +14,11 @@ class ComplexCoreDataViewModel: ObservableObject {
     
     //MARK: Stored entities
     @Published var business: [BusinessEntity] = []
+    @Published var departments: [DepartmentEntity] = []
     
     init(){
         getBusiness()
+        getDepartments()
     }
     
     // MARK: CRUD
@@ -44,12 +46,26 @@ class ComplexCoreDataViewModel: ObservableObject {
         } catch {
             print("error fetching business \(error.localizedDescription)")
         }
-        
+    }
+    
+    func getDepartments(){
+        let request = NSFetchRequest<DepartmentEntity>(entityName: "DepartmentEntity")
+        do {
+            departments = try manager.context.fetch(request)
+        } catch {
+            print("error fetching departments \(error.localizedDescription)")
+        }
     }
     
     func save(){
-        manager.save()
-        getBusiness()
+        business.removeAll()
+        departments.removeAll()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.manager.save()
+            self.getBusiness()
+            self.getDepartments()
+        }
+        
     }
     
 }

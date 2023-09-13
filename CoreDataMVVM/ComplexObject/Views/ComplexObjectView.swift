@@ -31,6 +31,13 @@ struct ComplexObjectView: View {
                             }
                         }
                     }
+                    ScrollView(.horizontal, showsIndicators: true){
+                        HStack(alignment: .top){
+                            ForEach(viewModel.departments){ departments in
+                                DepartmentView(entity: departments)
+                            }
+                        }
+                    }
                 }
                 .padding()
             }
