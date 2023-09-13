@@ -15,6 +15,9 @@ class ComplexCoreDataViewModel: ObservableObject {
     //MARK: Stored entities
     @Published var business: [BusinessEntity] = []
     
+    init(){
+        getBusiness()
+    }
     
     // MARK: CRUD
     
@@ -23,6 +26,17 @@ class ComplexCoreDataViewModel: ObservableObject {
         let newBusiness = BusinessEntity(context: manager.context)
         newBusiness.name = "Apple"
         save()
+    }
+    
+    // Fetch
+    func getBusiness(){
+        let request = NSFetchRequest<BusinessEntity>(entityName: "BusinessEntity")
+        do {
+            business = try manager.context.fetch(request)
+        } catch {
+            print("error fetching business \(error.localizedDescription)")
+        }
+       
     }
     
     func save(){
