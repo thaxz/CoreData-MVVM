@@ -28,15 +28,17 @@ class ComplexCoreDataViewModel: ObservableObject {
     // Create
     func addBusiness(){
         let newBusiness = BusinessEntity(context: manager.context)
-        newBusiness.name = "Apple"
+        newBusiness.name = "Facebook"
+//        newBusiness.departments = [departments[0], departments[1]]
+//        newBusiness.employees = [employees[2]]
         save()
     }
     
     func addDepartment(){
         let newDepartment = DepartmentEntity(context: manager.context)
-        newDepartment.name = "Engineering"
+        newDepartment.name = "Finance"
         // 1 to N, so its an set
-        //newDepartment.businesses = [business[0]]
+        newDepartment.businesses = [business[0], business[1], business[2]]
         newDepartment.addToEmployees(employees[2])
         save()
     }
